@@ -2,7 +2,7 @@ import React from "react"
 import { Nav, NavItem } from "reactstrap"
 import { NavLink, useNavigate } from "react-router-dom"
 
-const Navigation = ({current_user, logout}) => {
+const Navigation = ({currentUser, logout}) => {
   const navigate = useNavigate()
   const handleClick = () => {
     logout()
@@ -14,7 +14,7 @@ const Navigation = ({current_user, logout}) => {
         <NavItem>
           <NavLink to="/apartmentindex" className="nav-link">View Listings</NavLink>
         </NavItem>
-        {current_user && (
+        {currentUser && (
           <>
             <NavItem>
               <NavLink to="/myapartments" className="nav-link">My Listings</NavLink>
@@ -27,7 +27,7 @@ const Navigation = ({current_user, logout}) => {
             </NavItem>
           </>
         )}
-        {!current_user && (
+        {!currentUser && (
           <>
             <NavItem>
               <NavLink to="/login" className="nav-link">
