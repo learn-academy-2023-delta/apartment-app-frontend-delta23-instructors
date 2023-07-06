@@ -26,7 +26,7 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments}/>} />
-      <Route path="/myapartments" element={<ApartmentProtectedIndex />} />
+      <Route path="/myapartments" element={<ApartmentProtectedIndex currentUser={currentUser} apartments={apartments} />} />
       <Route path="/apartmentshow/:id" element={<ApartmentShow current_user={currentUser} apartments={apartments}/>} />
       <Route path="/apartmentnew" element={<ApartmentNew />} />
       <Route path="/apartmentedit/:id" element={<ApartmentEdit />} />
